@@ -58,18 +58,7 @@ A proposal event, as recorded on-chain, will have the following structure:
 
 ### High-Level Architecture Diagram
 
-```mermaid
-graph TD
-    A[Student/Club Leader] -- Submits Proposal --> B(Frontend DApp)
-    B -- Interacts with --> C(Smart Contracts on Blockchain)
-    C -- Stores Large Content Hash on --> D(IPFS/Arweave for Description)
-
-    E[Community Member] -- Views Proposals & Votes --> B
-    B -- Interacts with --> C
-
-    F[Anyone] -- Views Public Dashboard --> G(Public Dashboard)
-    G -- Reads Data from --> C & D
-```
+![design](images/MicroGrantsDapp.png)
 
 ### DAO Governance Rules
 
