@@ -151,7 +151,7 @@ contract GrantDao {
         require(treasuryBalance >= proposal.budget, "Insufficient treasury funds");
         treasuryBalance -= proposal.budget;
         (bool success,) = payable(proposal.proposer).call{value: proposal.budget}("");
-        require(success,"Trasnfer Failed.");
+        require(success,"Transfer Failed.");
         emit FundDisbursed(_id, proposal.budget, proposal.proposer);
     }
 
